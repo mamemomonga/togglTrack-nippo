@@ -1,0 +1,9 @@
+slack:
+  token: "xoxp-000000000000-000000000000-0000000000000-00000000000000000000000000000000"
+  channel: "#channelName"
+
+toggl:
+  token: 00000000000000000000000000000000
+  workspace: "mamemomonga's Workspace"
+  client: "お客様"
+  project: "なにかの作業"
