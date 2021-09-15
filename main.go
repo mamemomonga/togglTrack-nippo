@@ -6,9 +6,9 @@ import (
 	"log"
 	"time"
 
-	"example.com/istyle-nippo/cfg"
-	"example.com/istyle-nippo/slackutil"
-	"example.com/istyle-nippo/togglutil"
+	"github.com/mamemomonga/togglTrack-nippo/cfg"
+	"github.com/mamemomonga/togglTrack-nippo/slackutil"
+	"github.com/mamemomonga/togglTrack-nippo/togglutil"
 	//	"github.com/davecgh/go-spew/spew"
 )
 
@@ -71,7 +71,7 @@ func toggl(datesOffset int) string {
 	}
 
 	now := time.Now()
-	targetTime := now.AddDate(0, 0, datesOffset).Local()
+	targetTime := now.AddDate(0, 0, datesOffset*-1).Local()
 	year, month, day := targetTime.Date()
 	week := targetTime.Weekday()
 
@@ -93,7 +93,7 @@ func toggl(datesOffset int) string {
 		if tme.Description != "" {
 			desc = tme.Description
 		}
-		buf = buf + fmt.Sprintf("    %3.2f時間 %s\n", float64(tme.Duration)/3600, desc)
+		buf = buf + fmt.Sprintf("    %3.1f 時間 %s\n", float64(tme.Duration)/3600, desc)
 	}
 	buf = buf + "```\n"
 
