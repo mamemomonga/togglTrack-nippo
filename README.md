@@ -37,3 +37,7 @@ config.yaml
 昨日の日報を指定Slackチャンネルに送る
 
 	./toggl-nippo -config ./config.yaml -days -1 -slack
+
+# License
+
+MIT
