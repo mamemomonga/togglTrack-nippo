@@ -10,15 +10,27 @@ toggle trackの特定Projectの日報をSlackの特定チャンネルに投げ�
 
 config.yaml
 
-	slack:
-	  token: "xoxp-000000000000-000000000000-0000000000000-00000000000000000000000000000000"
-	  channel: "#channelName"
-
-	toggl:
+	togglWorkspace:
 	  token: 00000000000000000000000000000000
 	  workspace: "mamemomonga's Workspace"
-	  client: "お客様"
-	  project: "なにかの作業"
+
+	tasks:
+	  - slack:
+	      token: "xoxp-000000000000-000000000000-0000000000000-00000000000000000000000000000000"
+	      channel: "#channelName1"
+	    toggl:
+	      - client: "お客様1"
+	        project: "なにかの作業A"
+	      - client: "お客様1"
+	        project: "なにかの作業B"
+	  - slack:
+	      token: "xoxp-000000000000-000000000000-0000000000000-00000000000000000000000000000000"
+	      channel: "#channelName2"
+	    toggl:
+	      - client: "お客様2"
+	        project: "なにかの作業B"
+	      - client: "お客様2"
+	        project: "なにかの作業B"
 
 # 実行例
 

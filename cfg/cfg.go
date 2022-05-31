@@ -10,8 +10,18 @@ import (
 )
 
 type Cfg struct {
-	Slack CfgSlack `yaml:"slack"`
-	Toggl CfgToggl `yaml:"toggl"`
+	Tasks          []CfgTask         `yaml:"tasks"`
+	TogglWorkspace CfgTogglWorkspace `yaml:"togglWorkspace"`
+}
+
+type CfgTogglWorkspace struct {
+	Token     string `yaml:"token"`
+	Workspace string `yaml:"workspace"`
+}
+
+type CfgTask struct {
+	Slack  CfgSlack   `yaml:"slack"`
+	Toggls []CfgToggl `yaml:"toggl"`
 }
 
 type CfgSlack struct {
@@ -20,10 +30,8 @@ type CfgSlack struct {
 }
 
 type CfgToggl struct {
-	Token     string `yaml:"token"`
-	Workspace string `yaml:"workspace"`
-	Client    string `yaml:"client"`
-	Project   string `yaml:"project"`
+	Client  string `yaml:"client"`
+	Project string `yaml:"project"`
 }
 
 func New(filename string) (t *Cfg, err error) {
