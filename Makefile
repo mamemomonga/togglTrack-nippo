@@ -10,6 +10,7 @@ release-build:
 
 release:
 	GOOS=darwin GOARCH=amd64 $(MAKE) release-build
+	GOOS=linux GOARCH=amd64 $(MAKE) release-build
 	GOOS=linux GOARCH=arm64 $(MAKE) release-build
 
 clean:
