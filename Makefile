@@ -1,4 +1,4 @@
-APPNAME=toggle-nippo
+APPNAME=toggl-nippo
 bin/$(APPNAME): vendor
 	go build -o $@ ./
 

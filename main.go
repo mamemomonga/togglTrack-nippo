@@ -93,8 +93,12 @@ func taskFilter(tsk cfg.CfgTask, offset int) (entrs []entryT) {
 		now := time.Now()
 		targetTime := now.AddDate(0, 0, offset*-1).Local()
 		year, month, day := targetTime.Date()
+		log.Printf("debug: Filter: %d/%d/%d", year, month, day)
 		err = tu.FilterTimeEntriesStartDate(year, month, day)
 		if err != nil {
+			if err == togglutil.ErrTimeEntriesNotFound {
+				return
+			}
 			log.Fatal(err)
 		}
 

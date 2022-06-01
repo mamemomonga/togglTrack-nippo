@@ -9,6 +9,13 @@ import (
 
 // https://pkg.go.dev/github.com/jason0x43/go-toggl
 
+var (
+	ErrWorkspaceIdNotFound = errors.New("error: workspace id not found")
+	ErrClientIdNotFound    = errors.New("error: client id not found")
+	ErrProjectIdNotFound   = errors.New("error: project id not found")
+	ErrTimeEntriesNotFound = errors.New("error: time entries not found")
+)
+
 type TogglUtil struct {
 	Session     toggl.Session
 	Account     toggl.Account
@@ -40,7 +47,7 @@ func (t *TogglUtil) FilterWorkspace(name string) (err error) {
 		}
 	}
 	if id == 0 {
-		return errors.New("error: workspace id not found")
+		return ErrWorkspaceIdNotFound
 	}
 	t.WorkspaceID = id
 	return nil
@@ -54,7 +61,7 @@ func (t *TogglUtil) FilterClient(name string) (err error) {
 		}
 	}
 	if id == 0 {
-		return errors.New("error: client id not found")
+		return ErrClientIdNotFound
 	}
 	t.ClientID = id
 	return nil
@@ -68,7 +75,7 @@ func (t *TogglUtil) FilterProject(name string) (err error) {
 		}
 	}
 	if id == 0 {
-		return errors.New("error: project id not found")
+		return ErrProjectIdNotFound
 	}
 	t.ProjectID = id
 	return nil
@@ -83,7 +90,7 @@ func (t *TogglUtil) FilterTimeEntries() (err error) {
 		}
 	}
 	if len(t.TimeEntries) == 0 {
-		return errors.New("error: time entries not found")
+		return ErrTimeEntriesNotFound
 	}
 	return nil
 }
@@ -97,7 +104,7 @@ func (t *TogglUtil) FilterTimeEntriesStartDate(year int, month time.Month, day i
 		}
 	}
 	if len(te) == 0 {
-		return errors.New("error: time entries not found")
+		return ErrTimeEntriesNotFound
 	}
 	t.TimeEntries = te
 	return nil
