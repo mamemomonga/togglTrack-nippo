@@ -1,0 +1,8 @@
+toggl_workspace:
+  // togglのtoken
+  token: "00000000000000000000000000000000"
+  // 対象のWorkspace名
+  workspace_name: "mamemomonga's workspace"
+
+// 「休憩」とするプロジェクト名
+rest_project_name: "休憩"
