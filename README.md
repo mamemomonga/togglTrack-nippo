@@ -2,8 +2,8 @@
 
 ## [type01](./type01/)
 
-toggle trackの特定Projectの日報をSlackの特定チャンネルに投げるツールです。
+toggle trackの特定Projectの日報をSlackの特定チャンネルに投げる
 
 ## [type02](./type02/)
 
-１日の作業開始時間と終了時間、休憩
+当日の作業開始時刻,終了時刻,休憩時間を表示する
