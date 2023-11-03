@@ -1,4 +1,5 @@
-APPNAME=toggl-nippo
+APPNAME=toggl-nippo-type01
+
 bin/$(APPNAME): vendor
 	go build -o $@ ./
 
@@ -10,6 +11,7 @@ release-build:
 
 release:
 	GOOS=darwin GOARCH=amd64 $(MAKE) release-build
+	GOOS=darwin GOARCH=arm64 $(MAKE) release-build
 	GOOS=linux GOARCH=amd64 $(MAKE) release-build
 	GOOS=linux GOARCH=arm64 $(MAKE) release-build
 

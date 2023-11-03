@@ -6,9 +6,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/mamemomonga/togglTrack-nippo/cfg"
-	"github.com/mamemomonga/togglTrack-nippo/slackutil"
-	"github.com/mamemomonga/togglTrack-nippo/togglutil"
+	"github.com/mamemomonga/togglTrack-nippo/type01/cfg"
+	"github.com/mamemomonga/togglTrack-nippo/type01/slackutil"
+	"github.com/mamemomonga/togglTrack-nippo/type01/togglutil"
 	//	"github.com/davecgh/go-spew/spew"
 )
 

@@ -1,4 +1,4 @@
-module github.com/mamemomonga/togglTrack-nippo
+module github.com/mamemomonga/togglTrack-nippo/type01
 
 go 1.17
 
