@@ -50,6 +50,4 @@ config.yaml
 
 	./toggl-nippo -config ./config.yaml -days 1 -slack
 
-# License
 
-MIT

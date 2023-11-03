@@ -7,3 +7,8 @@ toggle trackの特定Projectの日報をSlackの特定チャンネルに投げ�
 ## [type02](./type02/)
 
 当日の作業開始時刻,終了時刻,休憩時間を表示する
+
+# License
+
+MIT
+
