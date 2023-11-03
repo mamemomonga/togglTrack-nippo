@@ -4,6 +4,11 @@
 
 # 使い方
 
+* -days 0 は当日(デフォルト)、-days 1 で昨日。
+* デバッグログはSTDERRに出るので、邪魔だったら 2>/dev/null などで捨てる。
+
+実行例
+
     $ cp config.example.yaml config.yaml
     $ vim config.yaml
-    $ ./toggl-nippo-type02 -config ./config.yaml -days 0
+    $ ./toggl-nippo-type02 -config ./config.yaml -days 0 2>/dev/null
