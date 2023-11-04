@@ -1,4 +1,4 @@
-RELEASE_VERSION := v0.0.3
+RELEASE_VERSION := v0.0.4
 
 release: type01/release type02/release
 	mkdir -p release
@@ -21,10 +21,5 @@ gh-release:
 	gh release create $(RELEASE_VERSION) --generate-notes --latest
 	gh release upload $(RELEASE_VERSION) release/toggl-nippo-type01-darwin-amd64
 	gh release upload $(RELEASE_VERSION) release/toggl-nippo-type01-darwin-arm64
-	gh release upload $(RELEASE_VERSION) release/toggl-nippo-type01-linux-amd64
-	gh release upload $(RELEASE_VERSION) release/toggl-nippo-type01-linux-arm64
 	gh release upload $(RELEASE_VERSION) release/toggl-nippo-type02-darwin-amd64
 	gh release upload $(RELEASE_VERSION) release/toggl-nippo-type02-darwin-arm64
-	gh release upload $(RELEASE_VERSION) release/toggl-nippo-type02-linux-amd64
-	gh release upload $(RELEASE_VERSION) release/toggl-nippo-type02-linux-arm64
-
